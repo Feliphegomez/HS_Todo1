@@ -1,0 +1,30 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /
+
+rest:
+  cors:
+    allowed-origins: "*"
+
+#spring:
+#  jooq:
+#    sql-dialect: POSTGRES
+#  datasource:
+#    url: jdbc:postgresql://localhost/php-crud-data
+#    username: php-crud-data
+#    password: php-crud-data
+
+spring:
+  jooq:
+    sql-dialect: MYSQL
+  datasource:
+    url: jdbc:mysql://181.129.103.142:3306/php-crud-api?useSSL=false
+    username: kardex
+    password: kardex2020
+
+#spring:
+#  jooq:
+#    sql-dialect: H2
+#  datasource:
+#    url: jdbc:h2:mem:test
