@@ -1,0 +1,43 @@
+<%@page import="model.Producto"%>
+<%@page import="modelDao.ProductoDAO"%>
+<%@page import="java.util.List"%>
+<%@page import="java.util.Iterator"%>
+
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	 <h1>Productos</h1>
+	 <table>
+	 	<thead>
+		 	<tr>
+		 		<td>ID</td>
+		 		<td>Nombre</td>
+		 		<td>Desc</td>
+		 		<td>Cant. Dispo</td>
+		 		<td>Valor</td>
+		 	</tr>
+	 	</thead>
+	 	<% 
+	 	ProductoDAO dao = new ProductoDAO();
+	 	List<Producto>list = dao.listart();
+	 	Iterator<Producto>iter=list.interator();
+	 	Producto producto = null;
+	 	%>
+	 	<tbody>
+	 		<tr>
+	 			<td></td>
+	 			<td></td>
+	 			<td></td>
+	 			<td></td>
+	 			<td></td>
+	 		</tr>
+	 	</tbody>
+	 </table>
+</body>
+</html>

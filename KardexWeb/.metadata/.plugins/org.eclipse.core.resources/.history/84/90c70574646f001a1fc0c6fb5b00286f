@@ -1,0 +1,16 @@
+package config;
+
+import java.sql.DriverManager;
+
+public class Conexion {
+	Connection con;
+	
+	public Conexion() {
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+			con = DriverManager.getConnection("jdbc:mysql://181.129.103.142:3306/kardex", "kardex", "kardex2020");
+		} catch(Exception e) {
+			
+		}
+	}
+}

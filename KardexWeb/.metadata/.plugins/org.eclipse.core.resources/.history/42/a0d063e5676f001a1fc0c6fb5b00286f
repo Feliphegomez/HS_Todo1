@@ -1,0 +1,13 @@
+package interfaces;
+
+import java.util.List;
+
+import model.Producto;
+
+public interface CRUD {
+	public List listar();
+	public Producto list(int id);
+	public boolean agregar(Producto producto);
+	public boolean editar(Producto producto);
+	public boolean eliminar(Producto producto);
+}

@@ -1,0 +1,7 @@
+package modelDao;
+
+import interfaces.CRUD;
+
+public class ProductoDAO implements CRUD {
+
+}

@@ -1,0 +1,59 @@
+package model;
+
+public class Producto {
+	int id;
+	String name;
+	String description;
+	double price;
+	int quantity;
+	
+	public Producto() {
+	}
+	
+	public Producto(int id, String name, String description, double price, int quantity) {
+		this.id = id;
+		this.name = name;
+		this.description = description;
+		this.price = price;
+		this.quantity = quantity;
+	}
+	
+	public Producto(String name, String description, double price, int quantity) {
+		this.name = name;
+		this.description = description;
+		this.price = price;
+		this.quantity = quantity;
+	}
+	
+	public void setId(int id) {
+		this.id = id;
+	}
+	
+	public int getId() {
+		return id;
+	}
+	
+	public void setName(String name) {
+		this.name = name;
+	}
+	
+	public int getName() {
+		return name;
+	}
+	
+	public void setDescripion(String descripion) {
+		this.descripion = descripion;
+	}
+	
+	public int getId() {
+		return id;
+	}
+	
+	public void setId(int id) {
+		this.id = id;
+	}
+	
+	public int getId() {
+		return id;
+	}
+}

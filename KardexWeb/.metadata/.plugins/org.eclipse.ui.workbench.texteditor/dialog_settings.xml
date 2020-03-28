@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item value="false" key="isRegEx"/>
+		<item value="&lt;/script&gt;" key="selection"/>
+		<item value="false" key="casesensitive"/>
+		<item value="false" key="incremental"/>
+		<item value="true" key="wrap"/>
+		<item value="false" key="wholeword"/>
+		<list key="findhistory">
+			<item value="&lt;/script&gt;"/>
+			<item value="&lt;script "/>
+			<item value="&lt;script"/>
+			<item value="vue_profile"/>
+			<item value="home-template"/>
+			<item value="images/admin.jpg"/>
+			<item value="&quot;index.html&quot;"/>
+			<item value="index.ht"/>
+			<item value="dashboar"/>
+			<item value="italy"/>
+			<item value="Log out"/>
+			<item value="Logou"/>
+			<item value="Description"/>
+		</list>
+		<list key="replacehistory">
+			<item value="&quot;index.jsp&quot;"/>
+			<item value="&quot;Home&quot;"/>
+		</list>
+	</section>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
+		<item value="263" key="DIALOG_WIDTH"/>
+		<item value="1|Tahoma|8.25|0|WINDOWS|1|-11|0|0|0|400|0|0|0|1|0|0|0|0|Tahoma" key="DIALOG_FONT_NAME"/>
+		<item value="367" key="DIALOG_HEIGHT"/>
+		<item value="330" key="DIALOG_X_ORIGIN"/>
+		<item value="184" key="DIALOG_Y_ORIGIN"/>
+	</section>
+</section>

@@ -1,0 +1,267 @@
+<% String errorMsg = (String)request.getSession().getAttribute("errorMsg"); %>
+<% int UserUserid = (int)request.getSession().getAttribute("userid"); %>
+<% String UserUsername = (String)request.getSession().getAttribute("username"); %>
+<% String UserFullname = (String)request.getSession().getAttribute("fullname"); %>
+
+	
+<template id="vue_profile">
+	<div>
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="header">
+					<h4>Profile Information</h4>
+				</div>
+				<div class="content">
+					<div class="row">
+						<img class="col-sm-3 col-sm-offset-1" src="images/bg-login.jpg" />
+						<div class="col-sm-4">
+							<h4><%= UserUsername %></h4>
+							<h4>[Type]</h4>
+						</div>
+						<div class="col-sm-3">
+							<button class="btn btn-lg btn-primary pull-right"><span class="glyphicon glyphicon-edit"></span></button>
+						</div>
+					</div>
+					<div class="row">
+						<h4 class="col-sm-3 col-sm-offset-1 col">[X] Followers</h4>
+						<h4 class="col-sm-4 col">[X] Votes</h4>
+						<button class="col-sm-3 btn btn-primary col"><h4>[X] Requests</h4></button>
+						<h3 class="col-sm-10 col-sm-offset-1 title">Supported Causes</h3>
+						<div id="supportedCauses" class="col-sm-10 col-sm-offset-1">
+							<div id="pane1" class="cause-info">
+								<div>
+									<img src="images/bg-login.jpg" />
+									<div>
+										<h4>[Name]</h4>
+										<h4>[Type]</h4>
+									</div>
+									<div>
+										<h4>[X] Votes</h4>
+									</div>
+								</div>
+							</div>
+							<h4>About:</h4>
+							<div>
+								<p>Nam ex ullum assum apeirian, facilisi splendide quo ex. Sea et nonumy accusata, in utinam vocent facilis vix. Cu vix eripuit temporibus mediocritatem, denique theophrastus ne mel, et graecis maiorum mediocritatem per. Magna tacimates sed eu, sit no graeco latine referrentur. Id sed assum quaerendum, apeirian erroribus ut his. Ex mei mazim minimum.</p>
+								<h5>More at <a>[Website]</a></h5>
+							</div>
+							<button class="btn btn-primary pull-right">Give</button>
+						</div>
+						<div>
+							<h2><a class="toggle-handle" href="#pane1" data-area="pane1"><span class="glyphicon glyphicon-chevron-down"></span></a></h2>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</template>
+
+<template id="vue-help">
+   <div>
+	   <div class="jumbotron jumbotron-sm">
+	       <div class="container">
+	           <div class="row">
+	               <div class="col-sm-12 col-lg-12">
+	                   <h1 class="h1">Contact us <small>Feel free to contact us</small></h1>
+	               </div>
+	           </div>
+	       </div>
+	   </div>
+	   <div class="container">
+	       <div class="row">
+	           <div class="col-md-8">
+	               <div class="well well-sm">
+	                   <form>
+	                       <div class="row">
+	                           <div class="col-md-6">
+	                               <div class="form-group">
+	                                   <label for="name">Company Name</label>
+	                                   <input type="text" class="form-control" id="name" placeholder="Enter name" required="required" />
+	                               </div>
+	                               <div class="form-group">
+	                                   <label for="email">Email Address</label>
+	                                   <div class="input-group">
+	                                       <span class="input-group-addon">
+	                                           <span class="glyphicon glyphicon-envelope"></span>
+	                                       </span>
+	                                       <input type="email" class="form-control" id="email" placeholder="Enter email" required="required" />
+	                                   </div>
+	                               </div>
+	                               <div class="form-group">
+	                                   <label for="subject">Subject</label>
+	                                   <select id="subject" name="subject" class="form-control" required="required">
+	                                       <option value="na" selected="">Choose One:</option>
+	                                       <option value="service">General Customer Service</option>
+	                                       <option value="suggestions">Suggestions</option>
+	                                       <option value="product">Product Support</option>
+	                                   </select>
+	                               </div>
+	                           </div>
+	                           <div class="col-md-6">
+	                               <div class="form-group">
+	                                   <label for="name">Message</label>
+	                                   <textarea name="message" id="message" class="form-control" rows="9" cols="25" required="required" placeholder="Message"></textarea>
+	                               </div>
+	                           </div>
+	                           <div class="col-md-12">
+	                               <button type="submit" class="btn btn-primary pull-right" id="btnContactUs">Send Message</button>
+	                           </div>
+	                       </div>
+	                   </form>
+	               </div>
+	           </div>
+	           <div class="col-md-4">
+	               <form>
+	                   <legend><span class="glyphicon glyphicon-globe"></span>Our office</legend>
+	                   <address>
+	                       <strong>Givingest</strong><br>
+	                       795 Folsom Ave, Suite 600<br>
+	                       San Francisco, CA 94107<br>
+	                       <abbr title="Phone">P:</abbr>
+	                       (123) 456-7890
+	                   </address>
+	                   <address>
+	                       <strong>Full Name</strong><br>
+	                       <a href="mailto:#">first.last@example.com</a>
+	                   </address>
+	               </form>
+	           </div>
+	       </div>
+   		</div>
+   </div>
+</template>
+
+<template id="vue_shop">
+	<div>
+		<div class="container" style="margin-top:50px;">
+			<div class="row">
+		
+		        <div class="col-xs-12 col-sm-6 col-md-3" v-for="(record, record_i) in records">
+		            <div class="col-item">
+		                <div class="photo">
+		                    <img src="http://placehold.it/350x260" class="img-responsive" alt="a" />
+		                </div>
+		                <div class="info">
+		                    <div class="row">
+		                        <div class="price col-md-6">
+		                            <h5> {{ record.nombre }}</h5>
+		                            <h5 class="price-text-color">$ {{ record.valor_unitario.toLocaleString() }}</h5>
+		                        </div>
+		                        <div class="rating hidden-sm col-md-6">
+		                            <i class="price-text-color fa fa-star"></i><i class="price-text-color fa fa-star">
+		                            </i><i class="price-text-color fa fa-star"></i><i class="price-text-color fa fa-star">
+		                            </i><i class="fa fa-star"></i>
+		                        </div>
+		                    </div>
+		                    <div class="separator clear-left">
+		                        <p class="btn-add">
+		                            <i class="fa fa-shopping-cart"></i><a href="http://www.jquery2dotnet.com" class="hidden-sm">Add to cart</a></p>
+		                        <p class="btn-details">
+		                            <i class="fa fa-list"></i><a href="http://www.jquery2dotnet.com" class="hidden-sm">More details</a></p>
+		                    </div>
+		                    <div class="clearfix">
+		                    </div>
+		                </div>
+		            </div>
+		        </div>
+		        
+			</div>
+		</div>
+	</div>
+</template>
+   
+<template id="adminKardex">
+	<div>
+		<div class="container-fluid main-container row">
+			<div class="col-md-2 sidebar">
+				<div class="row">
+					<!-- uncomment code for absolute positioning tweek see top comment in css -->
+					<div class="absolute-wrapper"> </div>
+					<!-- Menu -->
+					<div class="side-menu">
+						<nav class="navbar navbar-default" role="navigation">
+						<!-- Main Menu -->
+							<div class="side-menu-container">
+								<ul class="nav navbar-nav">
+									<li class="active"><a href="#"><span class="glyphicon glyphicon-dashboard"></span> Dashboard</a></li>
+									<li><a href="#"><span class="glyphicon glyphicon-plane"></span> Active Link</a></li>
+									<li><a href="#"><span class="glyphicon glyphicon-cloud"></span> Link</a></li>
+									<!-- Dropdown-->
+									<li class="panel panel-default" id="dropdown">
+										<a data-toggle="collapse" href="#dropdown-lvl1">
+											<span class="glyphicon glyphicon-user"></span> Sub Level <span class="caret"></span>
+										</a>
+										<!-- Dropdown level 1 -->
+										<div id="dropdown-lvl1" class="panel-collapse collapse">
+											<div class="panel-body">
+												<ul class="nav navbar-nav">
+													<li><a href="#">Link</a></li>
+													<li><a href="#">Link</a></li>
+													<li><a href="#">Link</a></li>
+													<!-- Dropdown level 2 -->
+													<li class="panel panel-default" id="dropdown">
+														<a data-toggle="collapse" href="#dropdown-lvl2">
+															<span class="glyphicon glyphicon-off"></span> Sub Level <span class="caret"></span>
+														</a>
+														<div id="dropdown-lvl2" class="panel-collapse collapse">
+															<div class="panel-body">
+																<ul class="nav navbar-nav">
+																	<li><a href="#">Link</a></li>
+																	<li><a href="#">Link</a></li>
+																	<li><a href="#">Link</a></li>
+																</ul>
+															</div>
+														</div>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</li>
+				
+									<li><a href="#"><span class="glyphicon glyphicon-signal"></span> Link</a></li>
+									
+									<!-- Dropdown-->
+									<li class="panel panel-default" id="dropdown">
+										<a data-toggle="collapse" href="#dropdown-products">
+											<span class="glyphicon glyphicon-user"></span> Productos <span class="caret"></span>
+										</a>
+										
+										<div id="dropdown-products" class="panel-collapse collapse">
+											<div class="panel-body">
+												<ul class="nav navbar-nav">
+													<li><a href="#">Link</a></li>
+													<li><a href="#">Link</a></li>
+													<li><a href="#">Link</a></li>
+												</ul>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div><!-- /.navbar-collapse -->
+						</nav>
+					</div>
+				</div>
+			</div>
+	 		<div class="col-md-10 content">
+	 			<div class="panel panel-default">
+	 				<div class="panel-heading">Dashboard</div>
+	 				<div class="panel-body">
+		 				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+					</div>
+				</div>
+			</div>
+	  		<footer class="pull-left footer">
+	  			<p class="col-md-12">
+	  				<hr class="divider">
+	  				Copyright &COPY; 2015 <a href="http://www.pingpong-labs.com">Gravitano</a>
+	  			</p>
+	  		</footer>
+		</div>
+	</div>
+</template>

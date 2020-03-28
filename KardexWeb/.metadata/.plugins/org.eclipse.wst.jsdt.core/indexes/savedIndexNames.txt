@@ -1,0 +1,8 @@
+INDEX VERSION 1.4+D:\Zhulkstore\0001\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+1381994213.index
+3539285037.index
+1734227561.index
+3459427117.index
+457691658.index
+399075645.index
+3163224342.index

@@ -1,0 +1,45 @@
+package modelDao;
+
+import java.util.List;
+
+import interfaces.CRUD;
+import model.Producto;
+
+public class ProductoDAO implements CRUD {
+	Conexion cn = new Conexion();
+	Connection con;
+	PreparedStatement ps;
+	ResultSet rs;
+	Producto modelProducto = new Producto();
+	
+	@Override
+	public List listar() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Producto list(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public boolean agregar(Producto producto) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean editar(Producto producto) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean eliminar(int id) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+}

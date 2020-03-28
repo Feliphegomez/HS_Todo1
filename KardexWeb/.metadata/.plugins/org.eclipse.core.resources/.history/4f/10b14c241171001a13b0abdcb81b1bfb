@@ -1,0 +1,70 @@
+<% String errorMsg = (String)request.getSession().getAttribute("errorMsg"); %>
+<% int UserUserid = (int)request.getSession().getAttribute("userid"); %>
+<% String UserUsername = (String)request.getSession().getAttribute("username"); %>
+<% String UserFullname = (String)request.getSession().getAttribute("fullname"); %>
+
+<temnplate id="home-template">
+	<div>
+		<h1>HOME</h1>
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="header">
+					<h4>Profile Information</h4>
+				</div>
+			</div>
+		</div>
+	</div>
+</temnplate>
+
+<template id="vue_profile">
+	<div>
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="header">
+					<h4>Profile Information</h4>
+				</div>
+				<div class="content">
+					<div class="row">
+						<img class="col-sm-3 col-sm-offset-1" src="images/bg-login.jpg" />
+						<div class="col-sm-4">
+							<h4><%= UserUsername %></h4>
+							<h4>[Type]</h4>
+						</div>
+						<div class="col-sm-3">
+							<button class="btn btn-lg btn-primary pull-right"><span class="glyphicon glyphicon-edit"></span></button>
+						</div>
+					</div>
+					<div class="row">
+						<h4 class="col-sm-3 col-sm-offset-1 col">[X] Followers</h4>
+						<h4 class="col-sm-4 col">[X] Votes</h4>
+						<button class="col-sm-3 btn btn-primary col"><h4>[X] Requests</h4></button>
+						<h3 class="col-sm-10 col-sm-offset-1 title">Supported Causes</h3>
+						<div id="supportedCauses" class="col-sm-10 col-sm-offset-1">
+							<div id="pane1" class="cause-info">
+								<div>
+									<img src="images/bg-login.jpg" />
+									<div>
+										<h4>[Name]</h4>
+										<h4>[Type]</h4>
+									</div>
+									<div>
+										<h4>[X] Votes</h4>
+									</div>
+								</div>
+							</div>
+							<h4>About:</h4>
+							<div>
+								<p>Nam ex ullum assum apeirian, facilisi splendide quo ex. Sea et nonumy accusata, in utinam vocent facilis vix. Cu vix eripuit temporibus mediocritatem, denique theophrastus ne mel, et graecis maiorum mediocritatem per. Magna tacimates sed eu, sit no graeco latine referrentur. Id sed assum quaerendum, apeirian erroribus ut his. Ex mei mazim minimum.</p>
+								<h5>More at <a>[Website]</a></h5>
+							</div>
+							<button class="btn btn-primary pull-right">Give</button>
+						</div>
+						<div>
+							<h2><a class="toggle-handle" href="#pane1" data-area="pane1"><span class="glyphicon glyphicon-chevron-down"></span></a></h2>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</template>
